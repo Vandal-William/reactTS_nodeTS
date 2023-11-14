@@ -1,0 +1,28 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 8082:3001
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./backend:/server
+    ports:
+      - 8081:8000
+
+  postgres:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=mypassword
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
