@@ -1,26 +1,46 @@
-# CREER le Back
+## Creer le Back
+
+```shell
 cd backend/
 npm init --yes
 npm install express
 npm i -D typescript @types/express @types/node 
 npx tsc --init
-# CREER le front
-npx create-react-app frontend --template typescript
+```
+## Creer le front
 
+```shell
+npx create-react-app frontend --template typescript
+```
 # LANCER docker compose
 
 ```shell
 sudo docker compose up -d
 ```
+### voir tous les contenaire 
 
-# voir les contenaire run
-
+```shell
 sudo docker ps -a
+```
+### voir tous les contenaire run
 
-# voir les logs 
+```shell
+sudo docker ps
+```
+### voir les logs 
 
+```shell
 sudo docker logs react-project-backent-1(NAMES)
+```
+### rebuild
 
-# rebuild
-
+```shell
 sudo docker compose up -d --build
+```
+### accéder au front 
+
+http://172.19.0.2:3000
+
+### accéder au back
+
+http://localhost:8081/

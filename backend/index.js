@@ -15,5 +15,5 @@ app.get('/freki', (req, res) => {
     res.send('TEST API Freki');
 });
 app.listen(8000, () => {
-    console.log(`Server is running !`);
+    console.log(`Server is running on http://localhost:8000 !`);
 });
