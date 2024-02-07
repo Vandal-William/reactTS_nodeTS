@@ -29,3 +29,10 @@ sudo docker compose down
 ```shell
 sudo docker compose stop
 ```
+
+
+### Supprimer des contener
+
+```shell
+sudo docker image prune
+```
